@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		nav {
+			background-color: #666;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		nav li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 5px;
+		}
+		nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+		main {
+			padding: 20px;
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function updateText() {
+			var text = "You have selected: ";
+			if (document.getElementById("option1").checked) {
+				text += "Option 1 ";
+			}
+			if (document.getElementById("option2").checked) {
+				text += "Option 2 ";
+			}
+			if (document.getElementById("option3").checked) {
+				text += "Option 3 ";
+			}
+			document.getElementById("selection").innerHTML = text;
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>My Website</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<main>
+		<h2>Welcome to my website!</h2>
+		<p>Please select the following options:</p>
+		<form>
+			<label for="option1">
+				<input type="checkbox" id="option1" name="option1" value="option1" onchange="updateText()">
+				Option 1
+			</label><br>
+			<label for="option2">
+				<input type="checkbox" id="option2" name="option2" value="option2" onchange="updateText()">
+				Option 2
+			</label><br>
+			<label for="option3">
+				<input type="checkbox" id="option3" name="option3" value="option3" onchange="updateText()">
+				Option 3
+			</label><br>
+		</form>
+		<p id="selection"></p>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
+</html>
